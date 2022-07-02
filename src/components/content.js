@@ -1,42 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import StudentList from './studentList';
 
 const Content = () => {
     //       list       method
-    const [students, setStudents] = useState(
-        [
-            {
-                "id" : 1,
-                "firstName": "Michell",
-                "lastName" : "Valdivia",
-                "course": "MERN"
-            },
-            {
-                "id" : 2,
-                "firstName": "Jack",
-                "lastName": "Sparrow",
-                "course": "Python"
-            },
-            {
-                "id" : 3,
-                "firstName": "Ricky",
-                "lastName": "Ponting",
-                "course": "MERN"
-            },
-            {
-                "id" : 4,
-                "firstName": "Watson",
-                "lastName": "Daniel",
-                "course": "PYTHON"
-            },
-            {
-                "id" : 5,
-                "firstName": "Kayla",
-                "lastName": "Mccausson",
-                "course": "MERN"
-            }
-        ]
-    );
+    const [students, setStudents] = useState([]);
 
     const [searchText, setSearchText] = useState("");
 

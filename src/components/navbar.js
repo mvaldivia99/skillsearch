@@ -2,7 +2,7 @@
 const NavBar = () => {
     return (
         <div>
-            <nav>
+            <nav className="navbar">
                 <h1>Skillspire</h1>
                 <div>
                     <a href="/">List</a>
