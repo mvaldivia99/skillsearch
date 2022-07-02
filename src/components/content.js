@@ -4,8 +4,37 @@ import StudentList from './studentList';
 const Content = () => {
     //       list       method
     const [students, setStudents] = useState([]);
-
     const [searchText, setSearchText] = useState("");
+
+    useEffect(() => {
+        //   object                             .then is a method belonging to that object
+        fetch('http://localhost:7000/students/')
+        .then(body => {console.log(body.json());})
+    }, []);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     const deleteHandler = (id) => {
         const list = students.filter(student => student.id != id);
