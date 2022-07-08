@@ -17,6 +17,18 @@
       "firstName": "Ricky",
       "lastName": "Ponting",
       "course": "MERN"
+    },
+    {
+      "firstName": "Adam",
+      "lastName": "Jones",
+      "course": "Java",
+      "id": 4
+    },
+    {
+      "firstName": "Jenny",
+      "lastName": "Valdez",
+      "course": "Ruby",
+      "id": 5
     }
   ]
 }

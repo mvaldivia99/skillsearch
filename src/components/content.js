@@ -1,48 +1,21 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useInsertionEffect } from 'react';
 import StudentList from './studentList';
+import useGetRequest from './useGetRequest';
 
 const Content = () => {
-    //       list       method
-    const [students, setStudents] = useState([]);
     const [searchText, setSearchText] = useState("");
-
-    useEffect(() => {
-        //   object                             .then is a method belonging to that object
-        fetch('http://localhost:7000/students/')
-        .then(body => {console.log(body.json());})
-    }, []);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const { data: students, isLoading, errorMessage } = useGetRequest("http://localhost:7000/students/");
 
 
     const deleteHandler = (id) => {
         const list = students.filter(student => student.id != id);
-        setStudents(list);
+        //setStudents(list);
     };
 
     return (
         <div>
+            {isLoading && <div>Loading... Please wait.</div>}
+            {errorMessage && <div style={{color: "red"}}>{errorMessage}</div>}
             <StudentList students={students} header="All current students" deleteHandler={deleteHandler}/>
             <br/>
             <label>Search : </label>
