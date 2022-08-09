@@ -6,6 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 import StudentDetails from "./components/studentdetails";
+import StudentCreate from "./components/studentcreate";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <Routes>
-        <Route path="/create" element={<div><h1>Create new student</h1></div>}></Route>
+        <Route path="/create" element={<StudentCreate></StudentCreate>}></Route>
         <Route path="/list" element={<Content></Content>}></Route>
         <Route path="/" element={<div><h1>Welcome Page</h1></div>}></Route>
         <Route path="/students/:id" element={<StudentDetails></StudentDetails>}></Route>

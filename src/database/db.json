@@ -29,6 +29,18 @@
       "lastName": "Valdez",
       "course": "Ruby",
       "id": 5
+    },
+    {
+      "firstName": "Lola",
+      "lastName": "Cardenaz",
+      "course": "SQL",
+      "id": 6
+    },
+    {
+      "firstName": "Jake",
+      "lastName": "Statefarm",
+      "course": "",
+      "id": 7
     }
   ]
 }

@@ -8,7 +8,7 @@ const NavBar = () => {
                 <h1>Skillspire</h1>
                 <div className='links'>
                     <Link to="/list">List</Link>
-                    <Link to="/create">Creat New</Link>
+                    <Link to="/create">Create New</Link>
                 </div>
             </nav>
         </div>
